@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.card {
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative; /* Added for positioning play button */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-content {
+    padding: 10px;
+}
+
+.card h2 {
+    font-size: 1.4em;
+    margin-bottom: 5px;
+    cursor: pointer;
+    color: blue;
+    text-decoration: underline;
+    display: flex; /* Added to align items */
+    align-items: center; /* Added to align items */
+}
+
+.card h2 .play-button {
+    fill: #FF0000;
+    width: 64px;
+    height: 64px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.card p {
+    font-size: 1em;
+    line-height: 1.4;
+    color: #666;
+}
+
+.card-footer {
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: right;
+}
+
+#trailerModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#trailerModal iframe {
+    width: 80%;
+    height: 80%;
+}
+
+#trailerModal .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 2em;
+    color: white;
+    cursor: pointer;
+}
